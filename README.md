@@ -17,4 +17,4 @@ I plan to upgrade to minecraft 1.18.x using java 17 after
 a stable release of minecraft 1.18. 
 
 ## Pictures
-![ScreenShot](./run/screenshots/2021-11-18_23.01.09.png)
+![ScreenShot](readme_files/2021-11-18_23.01.09.png)
