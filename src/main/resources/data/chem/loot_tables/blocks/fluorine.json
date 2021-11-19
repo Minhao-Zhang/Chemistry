@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "chem:fluorine",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
