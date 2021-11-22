@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "chem:lathanum",
+          "name": "chem:platinum",
           "conditions": [
             {
               "condition": "minecraft:match_tool",

@@ -76,7 +76,7 @@ public class Chemistry implements ModInitializer {
     public static final ChemBlock XENON = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock CESIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock BARIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
-    public static final ChemBlock LATHANUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
+    public static final ChemBlock LANTHANUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock CERIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock PRASEODYMIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock NEODYMIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
@@ -97,7 +97,7 @@ public class Chemistry implements ModInitializer {
     public static final ChemBlock RHENIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock OSMIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock IRIDIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
-    public static final ChemBlock PLATIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
+    public static final ChemBlock PLATINUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock GOLD = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock MERCURY = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock THALLIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
@@ -215,7 +215,7 @@ public class Chemistry implements ModInitializer {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "xenon"), XENON);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cesium"), CESIUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "barium"), BARIUM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "lathanum"), LATHANUM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "lanthanum"), LANTHANUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cerium"), CERIUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "praseodymium"), PRASEODYMIUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "neodymium"), NEODYMIUM);
@@ -236,7 +236,7 @@ public class Chemistry implements ModInitializer {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rhenium"), RHENIUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "osmium"), OSMIUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "iridium"), IRIDIUM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "platium"), PLATIUM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "platinum"), PLATINUM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "gold"), GOLD);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mercury"), MERCURY);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "thallium"), THALLIUM);
@@ -336,7 +336,7 @@ public class Chemistry implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "xenon"), new BlockItem(XENON, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cesium"), new BlockItem(CESIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "barium"), new BlockItem(BARIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lathanum"), new BlockItem(LATHANUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lathanum"), new BlockItem(LANTHANUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cerium"), new BlockItem(CERIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "praseodymium"), new BlockItem(PRASEODYMIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "neodymium"), new BlockItem(NEODYMIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
@@ -357,7 +357,7 @@ public class Chemistry implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rhenium"), new BlockItem(RHENIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "osmium"), new BlockItem(OSMIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iridium"), new BlockItem(IRIDIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "platium"), new BlockItem(PLATIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "platium"), new BlockItem(PLATINUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold"), new BlockItem(GOLD, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mercury"), new BlockItem(MERCURY, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "thallium"), new BlockItem(THALLIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
