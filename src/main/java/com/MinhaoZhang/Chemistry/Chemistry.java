@@ -10,6 +10,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,7 +20,11 @@ public class Chemistry implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger("chem");
     public static final String MOD_ID = "chem";
     public static final ItemGroup CHEM_ELEMENT_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "element"), () -> new ItemStack(Blocks.CAULDRON));
+    public static final ItemGroup CHEM_GAS_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "gas"), () -> new ItemStack(Items.GLASS_BOTTLE));
+    public static final ItemGroup CHEM_LIQUID_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "liquid"), () -> new ItemStack(Items.POTION));
+    public static final ItemGroup CHEM_METAL_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "metal"), () -> new ItemStack(Items.IRON_BLOCK));
     public static final ItemGroup CHEM_ITEM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "general"), () -> new ItemStack(Blocks.BREWING_STAND));
+
     public static final ChemBlock HYDROGEN = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock HELIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock LITHIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
@@ -138,8 +143,20 @@ public class Chemistry implements ModInitializer {
     public static final ChemBlock LIVERMORIUM = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock TENNESSINE = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
     public static final ChemBlock OGANESSON = new ChemBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f, 3600000f).requiresTool().luminance(15));
-    public static final ChemItem HYDROGEN_GAS = new ChemItem(new FabricItemSettings().group(CHEM_ITEM_GROUP).maxCount(16).food(new FoodComponent.Builder().hunger(0).saturationModifier(0).alwaysEdible().snack().statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 60*20), 1).build()));
-    public static final ChemItem HELIUM_GAS = new ChemItem(new FabricItemSettings().group(CHEM_ITEM_GROUP).maxCount(16).food(new FoodComponent.Builder().hunger(0).saturationModifier(0).alwaysEdible().snack().statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 60*20), 1).build()));
+
+    public static final ChemItem HYDROGEN_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16));
+    public static final ChemItem NITROGEN_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16));
+    public static final ChemItem OXYGEN_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16));
+    public static final ChemItem FLUORINE_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16));
+    public static final ChemItem CHLORINE_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16));
+    public static final ChemItem HELIUM_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16).rarity(Rarity.RARE));
+    public static final ChemItem NEON_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16).rarity(Rarity.RARE));
+    public static final ChemItem ARGON_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16).rarity(Rarity.RARE));
+    public static final ChemItem KRYPTON_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16).rarity(Rarity.RARE));
+    public static final ChemItem XENON_GAS = new ChemItem(new FabricItemSettings().group(CHEM_GAS_GROUP).maxCount(16).rarity(Rarity.RARE));
+
+    public static final ChemItem BROMINE_LIQUID = new ChemItem(new FabricItemSettings().group(CHEM_LIQUID_GROUP).maxCount(16));
+    public static final ChemItem MERCURY_METAL = new ChemItem(new FabricItemSettings().group(CHEM_METAL_GROUP).maxCount(16));
 
     @Override
     public void onInitialize() {
@@ -155,7 +172,17 @@ public class Chemistry implements ModInitializer {
 
     private void registerItem() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hydrogen_gas"), HYDROGEN_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nitrogen_gas"), NITROGEN_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "oxygen_gas"), OXYGEN_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fluorine_gas"), FLUORINE_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chlorine_gas"), CHLORINE_GAS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "helium_gas"), HELIUM_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "neon_gas"), NEON_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "argon_gas"), ARGON_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "krypton_gas"), KRYPTON_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "xenon_gas"), XENON_GAS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bromine_liquid"), BROMINE_LIQUID);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mercury_metal"), MERCURY_METAL);
     }
 
     private void registerBlock() {
@@ -336,7 +363,7 @@ public class Chemistry implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "xenon"), new BlockItem(XENON, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cesium"), new BlockItem(CESIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "barium"), new BlockItem(BARIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lathanum"), new BlockItem(LANTHANUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lanthanum"), new BlockItem(LANTHANUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cerium"), new BlockItem(CERIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "praseodymium"), new BlockItem(PRASEODYMIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "neodymium"), new BlockItem(NEODYMIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
@@ -357,7 +384,7 @@ public class Chemistry implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rhenium"), new BlockItem(RHENIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "osmium"), new BlockItem(OSMIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iridium"), new BlockItem(IRIDIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "platium"), new BlockItem(PLATINUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "platinum"), new BlockItem(PLATINUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gold"), new BlockItem(GOLD, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mercury"), new BlockItem(MERCURY, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "thallium"), new BlockItem(THALLIUM, new FabricItemSettings().group(CHEM_ELEMENT_GROUP)));

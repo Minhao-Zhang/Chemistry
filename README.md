@@ -11,8 +11,9 @@ I do not plan to add any feature to these element blocks, and you cannot react w
 They cannot be blown up, but they can be mined with an iron pickaxe with mining speed equal to a stone block.
 
 ## Current Substances
-1. Hydrogen gas
-2. Helium gas
+All the elemental gases and liquids have been added into the mod. 
+
+I excluded last two nobel gases on purpose since I do not plan to add any radioactive substances at this point. Because of that, any element after Bismuth will not be added into the mod nor Technetium. I am aware that Bismuth is radioactive, but the half-life of that is way too long that I consider that non-radioactive.
 
 ## Current Reactions
 I have not implemented any reaction into the mod yet.
@@ -25,4 +26,4 @@ I plan to upgrade to minecraft 1.18.x using java 17 after
 a stable release of minecraft 1.18. 
 
 ## Pictures
-![ScreenShot](readme_files/periodicTable.png)
+![ScreenShot](readme_files/current.png)

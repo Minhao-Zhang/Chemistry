@@ -1,5 +1,8 @@
 {
   "itemGroup.chem.element": "Elements",
+  "itemGroup.chem.gas": "Gases",
+  "itemGroup.chem.liquid": "Liquids",
+  "itemGroup.chem.metal": "Metals",
   "itemGroup.chem.general": "General",
   "block.chem.hydrogen": "Hydrogen",
   "block.chem.helium": "Helium",
@@ -120,5 +123,15 @@
   "block.chem.tennessine": "Tennessine",
   "block.chem.oganesson": "Oganesson",
   "item.chem.hydrogen_gas": "Hydrogen Gas",
-  "item.chem.helium_gas": "Helium Gas"
+  "item.chem.nitrogen_gas": "Nitrogen Gas",
+  "item.chem.oxygen_gas": "Oxygen Gas",
+  "item.chem.fluorine_gas": "Fluorine Gas",
+  "item.chem.chlorine_gas": "Chlorine Gas",
+  "item.chem.helium_gas": "Helium Gas",
+  "item.chem.neon_gas": "Neon Gas",
+  "item.chem.argon_gas": "Argon Gas",
+  "item.chem.krypton_gas": "Krypton Gas",
+  "item.chem.xenon_gas": "Xenon Gas",
+  "item.chem.bromine_liquid": "Bromine",
+  "item.chem.mercury_metal": "Mercury"
 }
