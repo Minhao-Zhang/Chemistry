@@ -21,9 +21,7 @@ I have not implemented any reaction into the mod yet.
 I plan to add inorganic reactions only with some combustion reactions with organic compound.
 
 ## Versions
-This mod is developed for minecraft 1.17.x using java 16. 
-I plan to upgrade to minecraft 1.18.x using java 17 after
-a stable release of minecraft 1.18. 
+Minecraft 1.18.1 with java 17
 
 ## Pictures
 ![ScreenShot](readme_files/current.png)
